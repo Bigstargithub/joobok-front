@@ -20,16 +20,16 @@ export default function CommonMenu() {
               <Link href="/introduce">교회소개</Link>
             </li>
             <li>
-              <Link href="">교회연혁</Link>
+              <Link href="/history">교회연혁</Link>
             </li>
             <li>
-              <Link href="">사역자소개</Link>
+              <Link href="/pastors">사역자소개</Link>
             </li>
             <li>
-              <Link href="">교회비전</Link>
+              <Link href="/church-vision">교회비전</Link>
             </li>
             <li>
-              <Link href="">오시는 길</Link>
+              <Link href="/church-location">오시는 길</Link>
             </li>
           </ul>
         </li>
