@@ -13,8 +13,6 @@ export default function AdminMainSettingPage() {
   const [worshipImagePreview, setWorshipImagePreview] = useState("");
   const [churchImagePreview, setchurchImagePreview] = useState("");
 
-  const formRef = useRef<HTMLFormElement>(null);
-
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/main`, {
       method: "GET",
@@ -55,10 +53,6 @@ export default function AdminMainSettingPage() {
     });
   }, []);
 
-  useEffect(() => {
-    console.log(mainBanner);
-  }, [mainBanner]);
-
   const onfileChange = (
     event: ChangeEvent<HTMLInputElement>,
     setState,
@@ -95,7 +89,7 @@ export default function AdminMainSettingPage() {
       <AdminHeaderComponent />
       <div className="p-4">
         <h1 className="text-2xl font-bold">메인 페이지 등록</h1>
-        <form onSubmit={formSubmit} className="mt-4" ref={formRef}>
+        <form onSubmit={formSubmit} className="mt-4">
           <div className="setting-area">
             <h3 className="text-xl font-medium mr-5">메인 배너 이미지</h3>
             <input

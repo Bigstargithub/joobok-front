@@ -11,3 +11,15 @@
 .setting-area {
   @apply flex flex-wrap content-center mt-5;
 }
+
+.setting-area h3 {
+  @apply text-xl font-medium mr-5;
+}
+
+.sermon-table tr {
+  @apply w-full;
+}
+
+.sermon-table tr td {
+  @apply text-center p-5;
+}
