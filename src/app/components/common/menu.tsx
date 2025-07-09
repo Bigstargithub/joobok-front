@@ -1,45 +1,68 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useEffect, useState } from "react"
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function CommonMenu() {
-  const [menuOpen, setMenuOpen] = useState("")
+  const [menuOpen, setMenuOpen] = useState("");
+  const router = useRouter();
 
   return (
     <nav className="md:w-2/3 flex flex-wrap justify-center content-center mt-[20px] m-auto hidden md:block">
       <ul className="flex w-full content-center justify-center">
         <li className="menu-li">
-          <p className={menuOpen === "introduce" ? "bg-blue-700 text-white!" : ""} onMouseEnter={() => {
-            setMenuOpen("introduce")
-          }}
-          >교회소개</p>
-          <ul className={menuOpen === "introduce" ? "animate-[menuopen_1s_ease-in-out] intro-menu-ul" : "hidden"} onMouseLeave={() => setMenuOpen("")}
+          <p
+            className={
+              menuOpen === "introduce" ? "bg-blue-700 text-white!" : ""
+            }
+            onMouseEnter={() => {
+              setMenuOpen("introduce");
+            }}
+            onClick={() => router.push("/user/introduce")}
+          >
+            교회소개
+          </p>
+          <ul
+            className={
+              menuOpen === "introduce"
+                ? "animate-[menuopen_1s_ease-in-out] intro-menu-ul"
+                : "hidden"
+            }
+            onMouseLeave={() => setMenuOpen("")}
           >
             <li>
-              <Link href="/introduce">교회소개</Link>
+              <Link href="/user/introduce">교회소개</Link>
             </li>
             <li>
-              <Link href="/history">교회연혁</Link>
+              <Link href="/user/history">교회연혁</Link>
             </li>
             <li>
-              <Link href="/pastors">사역자소개</Link>
+              <Link href="/user/pastors">사역자소개</Link>
             </li>
             <li>
-              <Link href="/church-vision">교회비전</Link>
+              <Link href="/user/church-vision">교회비전</Link>
             </li>
             <li>
-              <Link href="/church-location">오시는 길</Link>
+              <Link href="/user/church-location">오시는 길</Link>
             </li>
           </ul>
         </li>
         <li className="menu-li">
-          <p onMouseEnter={() => {
-            setMenuOpen("worship")
-          }}>
+          <p
+            onMouseEnter={() => {
+              setMenuOpen("worship");
+            }}
+          >
             예배와 모임
           </p>
-          <ul className={menuOpen === "worship" ? "animate-[menuopen_1s_ease-in-out] intro-menu-ul" : "hidden"} onMouseLeave={() => setMenuOpen("")}
+          <ul
+            className={
+              menuOpen === "worship"
+                ? "animate-[menuopen_1s_ease-in-out] intro-menu-ul"
+                : "hidden"
+            }
+            onMouseLeave={() => setMenuOpen("")}
           >
             <li>
               <Link href="">유치부</Link>
@@ -56,15 +79,30 @@ export default function CommonMenu() {
           </ul>
         </li>
         <li className="menu-li">
-          <p onMouseEnter={() => {
-            setMenuOpen("")
-          }}>설교영상</p>
+          <p
+            onMouseEnter={() => {
+              setMenuOpen("");
+            }}
+            onClick={() => router.push("/user/message-video")}
+          >
+            설교영상
+          </p>
         </li>
         <li className="menu-li">
-          <p onMouseEnter={() => {
-            setMenuOpen("churchWork")
-          }}>교회사역</p>
-          <ul className={menuOpen === "churchWork" ? "animate-[menuopen_1s_ease-in-out] intro-menu-ul" : "hidden"} onMouseLeave={() => setMenuOpen("")}
+          <p
+            onMouseEnter={() => {
+              setMenuOpen("churchWork");
+            }}
+          >
+            교회사역
+          </p>
+          <ul
+            className={
+              menuOpen === "churchWork"
+                ? "animate-[menuopen_1s_ease-in-out] intro-menu-ul"
+                : "hidden"
+            }
+            onMouseLeave={() => setMenuOpen("")}
           >
             <li>
               <Link href="">장년부 주일학교</Link>
@@ -81,10 +119,20 @@ export default function CommonMenu() {
           </ul>
         </li>
         <li className="menu-li">
-          <p onMouseEnter={() => {
-            setMenuOpen("community")
-          }}>커뮤니티</p>
-          <ul className={menuOpen === "community" ? "animate-[menuopen_1s_ease-in-out] intro-menu-ul" : "hidden"} onMouseLeave={() => setMenuOpen("")}
+          <p
+            onMouseEnter={() => {
+              setMenuOpen("community");
+            }}
+          >
+            커뮤니티
+          </p>
+          <ul
+            className={
+              menuOpen === "community"
+                ? "animate-[menuopen_1s_ease-in-out] intro-menu-ul"
+                : "hidden"
+            }
+            onMouseLeave={() => setMenuOpen("")}
           >
             <li>
               <Link href="">주복광장</Link>
@@ -95,17 +143,19 @@ export default function CommonMenu() {
             <li>
               <Link href="">영성글 모임</Link>
             </li>
-            <li>
-              <Link href="">새신자 등록</Link>
-            </li>
           </ul>
         </li>
         <li className="menu-li">
-          <p onMouseEnter={() => {
-            setMenuOpen("")
-          }}>수도원</p>
+          <p
+            onMouseEnter={() => {
+              setMenuOpen("");
+            }}
+            onClick={() => router.push("/user/abbey")}
+          >
+            수도원
+          </p>
         </li>
       </ul>
     </nav>
-  )
+  );
 }

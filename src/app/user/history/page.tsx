@@ -3,8 +3,8 @@ import Image from "next/image"
 export default function HistoryPage() {
   return (
     <main>
-      <div id="church-history" className="flex flex-nowrap justify-center content-center mx-10 church-history">
-        <div className="mx-10">
+      <div id="church-history" className="flex flex-nowrap justify-center content-center church-history gap-5">
+        <div>
           <h1 className="mr-3 text-7xl font-bold">교회 연혁</h1>
           <h3 className="mt-2 text-4xl">history</h3>
           <div className="mt-10">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function PastorsPage() {
   return (
-    <main className="md:w-1/2 m-auto">
+    <main className="m-auto">
       <h1 className="text-5xl font-semibold">섬기는 이</h1>
       <div id="main-pastor" className="flex flex-wrap flex-col justify-center content-center mt-5 text-center">
         <h3 className="text-center text-2xl font-semibold mb-4">담임목사</h3>

@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function IntroducePage() {
   return (
     <main>
-      <div id="church-introduce" className="flex flex-nowrap justify-center content-center mx-10">
-        <div className="mx-10">
+      <div id="church-introduce" className="flex flex-nowrap justify-center content-center">
+        <div>
           <h1 className="mr-3 text-7xl font-bold">주복교회</h1>
           <h3 className="mt-2 text-4xl">Joobok church</h3>
           <div className="mt-10">
@@ -25,9 +25,9 @@ export default function IntroducePage() {
         </div>
       </div>
       <div id="worship-schedule" className="flex justify-center content-center mt-40" >
-        <div id="worship-schedule-detail" className="mt-20 flex flex-col content-center justify-center w-1/6 relative">
+        <div id="worship-schedule-detail" className="mt-20 flex flex-col content-center justify-center relative">
           <h3 className="text-3xl font-bold text-center mb-5">예배시간 안내</h3>
-          <p className="w-full flex justify-between mb-3">
+          <p className="w-full flex justify-between gap-20 mb-3">
             <span className="font-bold">ㆍ주일 1부 예배</span>
             <span>오전 9:00 대예배실(2층)</span>
           </p>
