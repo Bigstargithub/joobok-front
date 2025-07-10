@@ -78,7 +78,7 @@ export default function AdminMainSettingPage() {
     });
 
     const resJson = await res.json();
-    console.log("resJson: ", resJson);
+
     if (resJson.status === 200) {
       alert(resJson.message);
     }

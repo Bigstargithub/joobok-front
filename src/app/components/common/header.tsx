@@ -5,7 +5,7 @@ export default function CommonHeader() {
   return (
     <header className="flex flex-row content-center flex-wrap mt-[30px]">
       <div className="w-1/3"></div>
-      <Link href="/" className="md:w-1/3 text-center">
+      <Link href="/user" className="md:w-1/3 text-center">
         <Image
           src={"/logo_pc.jpeg"}
           width={600}

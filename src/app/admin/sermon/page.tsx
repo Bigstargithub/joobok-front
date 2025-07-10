@@ -56,11 +56,12 @@ export default function SermonAdminPage() {
             {sermonList.length > 0 &&
               sermonList.map((sermon) => (
                 <SermonItemComponent
+                  key={`sermon_${sermon.id}`}
                   id={sermon.id}
                   thumbLink={sermon.thumbnail}
                   title={sermon.title}
                   description={sermon.description}
-                  createdAt={sermon.createdAt}
+                  createdAt={sermon.created_at}
                 />
               ))}
           </tbody>

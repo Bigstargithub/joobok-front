@@ -2,20 +2,44 @@
 
 import AdminHeaderComponent from "@/app/components/admin/admin_header";
 import Image from "next/image";
-import { redirect } from "next/navigation";
-import { ChangeEvent, useState } from "react";
+import { redirect, useRouter, useSearchParams } from "next/navigation";
+import { ChangeEvent, useEffect, useState } from "react";
 
-export default function SermonCreatePage({
-  isModify = false,
-  id = 0,
-}: {
-  isModify: boolean;
-  id: number;
-}) {
-  const [sermonThumbnailPreview, setSermonThumbnailPreview] = useState(null);
+export default function SermonCreatePage() {
+  const [sermonThumbnailPreview, setSermonThumbnailPreview] = useState("");
   const [sermonTitle, setSermonTitle] = useState("");
   const [sermonDes, setSermonDes] = useState("");
   const [sermonVideoLink, setSermonVideoLink] = useState("");
+
+  const searchParam = useSearchParams();
+  const id = searchParam.get("id");
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (id) {
+      fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/sermon/detail?id=${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).then(async (data) => {
+        const jsonData = await data.json();
+        if (jsonData.status !== 200) {
+          alert(jsonData.message);
+          return redirect("/admin/sermon");
+        }
+
+        const sermonData = jsonData.sermonData;
+        setSermonTitle(sermonData.title);
+        setSermonDes(sermonData.description);
+        setSermonVideoLink(sermonData.video_link);
+        setSermonThumbnailPreview(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}${sermonData.thumbnail}`
+        );
+      });
+    }
+  }, []);
 
   const onFileChange = (event: ChangeEvent<HTMLInputElement>, setState) => {
     const inputFile = event.target.files?.[0];
@@ -31,19 +55,32 @@ export default function SermonCreatePage({
     if (!sermonThumbnailPreview) return alert("썸네일을 등록해주세요.");
     if (!sermonTitle) return alert("제목을 입력해주세요.");
     if (!sermonVideoLink) return alert("비디오 링크를 입력해주세요.");
+    console.log("video_link: ", sermonVideoLink);
 
     const formData = new FormData(event.currentTarget);
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/sermon`, {
-      method: "POST",
-      body: formData,
-    });
+    if (!id) {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/sermon`, {
+        method: "POST",
+        body: formData,
+      });
 
-    const resJson = await res.json();
+      const resJson = await res.json();
 
-    if (resJson.status === 200) {
+      if (resJson.status === 200) {
+        alert(resJson.message);
+        return redirect("/admin/sermon");
+      }
+    } else {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/sermon`, {
+        method: "PATCH",
+        body: formData,
+      });
+
+      const resJson = await res.json();
+
       alert(resJson.message);
-      return redirect("/admin/sermon");
+      if (resJson.status === 200) return router.refresh();
     }
   };
 
@@ -55,6 +92,10 @@ export default function SermonCreatePage({
         <form onSubmit={formSubmit} className="mt-4">
           <div className="setting-area">
             <h3>설교영상 썸네일</h3>
+            {id && (
+              <input type="hidden" name="sermon_id" id="sermon_id" value={id} />
+            )}
+
             <input
               type="file"
               name="sermon_thumbnail"
@@ -80,6 +121,7 @@ export default function SermonCreatePage({
               className="border-1 rounded-sm w-1/2 p-2"
               maxLength={100}
               onChange={(e) => setSermonTitle(e.target.value)}
+              value={sermonTitle}
             />
           </div>
           <div className="setting-area">
@@ -89,6 +131,7 @@ export default function SermonCreatePage({
               id="sermon_description"
               className="border-1 rounded-sm w-1/2 h-[100px] resize-none p-2"
               onChange={(e) => setSermonDes(e.target.value)}
+              value={sermonDes}
             />
           </div>
           <div className="setting-area">
@@ -99,10 +142,11 @@ export default function SermonCreatePage({
               id="sermon_video_link"
               className="border-1 rounded-sm w-1/2 p-2"
               onChange={(e) => setSermonVideoLink(e.target.value)}
+              value={sermonVideoLink}
             />
           </div>
           <button className="px-4 py-2 text-white bg-black mt-5 cursor-pointer">
-            등록
+            {id ? "수정" : "등록"}
           </button>
         </form>
       </div>
