@@ -3,7 +3,13 @@
 import AdminHeaderComponent from "@/app/components/admin/admin_header";
 import Image from "next/image";
 import { redirect, useRouter, useSearchParams } from "next/navigation";
-import { ChangeEvent, useEffect, useState } from "react";
+import {
+  ChangeEvent,
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 
 export default function SermonCreatePage() {
   const [sermonThumbnailPreview, setSermonThumbnailPreview] = useState("");
@@ -41,7 +47,10 @@ export default function SermonCreatePage() {
     }
   }, []);
 
-  const onFileChange = (event: ChangeEvent<HTMLInputElement>, setState) => {
+  const onFileChange = (
+    event: ChangeEvent<HTMLInputElement>,
+    setState: Dispatch<SetStateAction<string>>
+  ) => {
     const inputFile = event.target.files?.[0];
 
     if (inputFile && inputFile?.type.startsWith("image/")) {
@@ -55,7 +64,6 @@ export default function SermonCreatePage() {
     if (!sermonThumbnailPreview) return alert("썸네일을 등록해주세요.");
     if (!sermonTitle) return alert("제목을 입력해주세요.");
     if (!sermonVideoLink) return alert("비디오 링크를 입력해주세요.");
-    console.log("video_link: ", sermonVideoLink);
 
     const formData = new FormData(event.currentTarget);
 

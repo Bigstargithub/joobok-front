@@ -12,6 +12,9 @@ export default function AdminHeaderComponent() {
           <Link href="/admin/main">메인</Link>
         </li>
         <li>
+          <Link href="/admin/popup">팝업</Link>
+        </li>
+        <li>
           <Link href="/admin/sermon">설교영상</Link>
         </li>
         <li>

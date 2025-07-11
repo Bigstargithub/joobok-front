@@ -10,7 +10,7 @@ export default function CommonMenu() {
 
   return (
     <nav className="md:w-2/3 flex flex-wrap justify-center content-center mt-[20px] m-auto hidden md:block">
-      <ul className="flex w-full content-center justify-center">
+      <ul className="flex w-full content-center justify-center z-6">
         <li className="menu-li">
           <p
             className={
@@ -65,16 +65,16 @@ export default function CommonMenu() {
             onMouseLeave={() => setMenuOpen("")}
           >
             <li>
-              <Link href="">유치부</Link>
+              <Link href="/user/infant">유치부</Link>
             </li>
             <li>
-              <Link href="">아동부</Link>
+              <Link href="/user/children">아동부</Link>
             </li>
             <li>
-              <Link href="">중고등부</Link>
+              <Link href="/user/teenager">중고등부</Link>
             </li>
             <li>
-              <Link href="">청년부</Link>
+              <Link href="/user/youth">청년부</Link>
             </li>
           </ul>
         </li>
@@ -105,16 +105,16 @@ export default function CommonMenu() {
             onMouseLeave={() => setMenuOpen("")}
           >
             <li>
-              <Link href="">장년부 주일학교</Link>
+              <Link href="/user/sunday_school">장년부 주일학교</Link>
             </li>
             <li>
-              <Link href="">실버마을 공동체</Link>
+              <Link href="/user/silver_viliage">실버마을 공동체</Link>
             </li>
             <li>
-              <Link href="">가정예배</Link>
+              <Link href="/user/home_worship">가정예배</Link>
             </li>
             <li>
-              <Link href="">국내 외 선교</Link>
+              <Link href="/user/missionary">국내 외 선교</Link>
             </li>
           </ul>
         </li>

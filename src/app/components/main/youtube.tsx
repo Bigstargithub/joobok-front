@@ -5,7 +5,9 @@ export default function MainYoutubeArea({
 }: {
   youtubeLink: string;
 }) {
-  console.log("youtube link: ", youtubeLink);
+  const youtubeURL = new URL(youtubeLink);
+  const youtubeVideoId = youtubeURL.searchParams.get("v");
+
   return (
     <section className="mt-5">
       <div className="flex relative">
@@ -26,7 +28,7 @@ export default function MainYoutubeArea({
         </div>
         <div className="md:w-1/2 bg-red">
           <iframe
-            src={youtubeLink}
+            src={`https://www.youtube.com/embed/${youtubeVideoId}`}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             className="w-full min-h-[600px]"
