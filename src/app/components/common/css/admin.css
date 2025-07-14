@@ -16,10 +16,10 @@
   @apply text-xl font-medium mr-5;
 }
 
-.sermon-table tr {
+.admin-list-table tr {
   @apply w-full;
 }
 
-.sermon-table tr td {
+.admin-list-table tr td {
   @apply text-center p-5;
 }

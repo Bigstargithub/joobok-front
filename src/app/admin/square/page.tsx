@@ -1,41 +1,39 @@
 "use client";
 
 import AdminHeaderComponent from "@/app/components/admin/admin_header";
-import SermonItemComponent from "@/app/components/admin/sermon/sermon_item";
+import AdminSquareItemComponent from "@/app/components/admin/sqaure/square_admin_item";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function SermonAdminPage() {
-  const [sermonList, setSermonList] = useState([]);
+export default function SquareListAdminPage() {
+  const [squareList, setSqaureList] = useState([]);
 
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/sermon`, {
+  const getSquareList = async () => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/square`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
-    }).then(async (data) => {
-      const jsonData = await data.json();
-      if (jsonData.status === 200) {
-        setSermonList(jsonData.sermonList);
-      } else {
-        alert(jsonData.message);
-      }
     });
-  }, []);
+
+    const resJson = await res.json();
+    if (resJson.status === 200) {
+      setSqaureList(resJson.squareList);
+    }
+  };
 
   useEffect(() => {
-    console.log("sermonList: ", sermonList);
-  }, [sermonList]);
+    getSquareList();
+  }, []);
 
   return (
     <section>
       <AdminHeaderComponent />
       <div className="p-4">
-        <h1 className="text-2xl font-bold">설교영상 리스트</h1>
+        <h1 className="text-2xl font-bold">주복광장 리스트</h1>
         <div className="flex justify-end">
           <Link
-            href="/admin/sermon/create"
+            href="/admin/square/create"
             className="border-1 cursor-pointer bg-black text-white px-10 py-4"
           >
             등록
@@ -53,15 +51,15 @@ export default function SermonAdminPage() {
             </tr>
           </thead>
           <tbody>
-            {sermonList.length > 0 &&
-              sermonList.map((sermon) => (
-                <SermonItemComponent
-                  key={`sermon_${sermon.id}`}
-                  id={sermon.id}
-                  thumbLink={sermon.thumbnail}
-                  title={sermon.title}
-                  description={sermon.description}
-                  createdAt={sermon.created_at}
+            {squareList.length > 0 &&
+              squareList.map((square) => (
+                <AdminSquareItemComponent
+                  key={`square_${square.id}`}
+                  id={square.id}
+                  thumbnail={square.thumbnail}
+                  title={square.title}
+                  description={square.description}
+                  createdAt={square.created_at}
                 />
               ))}
           </tbody>

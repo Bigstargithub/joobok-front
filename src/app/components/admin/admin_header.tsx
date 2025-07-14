@@ -18,7 +18,7 @@ export default function AdminHeaderComponent() {
           <Link href="/admin/sermon">설교영상</Link>
         </li>
         <li>
-          <p>메인</p>
+          <Link href="/admin/square">주복광장</Link>
         </li>
       </ul>
     </header>

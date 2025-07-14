@@ -2,15 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function SermonItemComponent({
+export default function AdminSquareItemComponent({
   id,
-  thumbLink,
+  thumbnail,
   title,
   description,
   createdAt,
 }: {
   id: number;
-  thumbLink: string;
+  thumbnail: string;
   title: string;
   description: string;
   createdAt: string;
@@ -18,10 +18,10 @@ export default function SermonItemComponent({
   const convertCreatedAt = new Date(createdAt).toISOString().split("T")[0];
   const router = useRouter();
 
-  const deleteSermonData = async () => {
-    if (confirm("정말 설교 영상을 삭제하시겠습니까?")) {
+  const deleteSquareData = async () => {
+    if (confirm("정말 주복광장 데이터를 삭제하시겠습니까?")) {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/sermon/${id}`,
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/square/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -36,12 +36,13 @@ export default function SermonItemComponent({
       if (jsonData.status === 200) return location.reload();
     }
   };
+
   return (
     <tr>
       <td className="w-20">{id}</td>
       <td className="w-[200px]">
         <Image
-          src={`${process.env.NEXT_PUBLIC_SERVER_URL}${thumbLink}`}
+          src={`${process.env.NEXT_PUBLIC_SERVER_URL}${thumbnail}`}
           width={200}
           height={100}
           alt={title}
@@ -51,11 +52,14 @@ export default function SermonItemComponent({
       <td>{description}</td>
       <td className="w-40">{convertCreatedAt}</td>
       <td className="w-50">
-        <Link href="/admin/sermon/create?id=1" className="mr-3 cursor-pointer">
+        <Link
+          href={`/admin/square/create?id=${id}`}
+          className="mr-3 cursor-pointer"
+        >
           수정
         </Link>
         <button
-          onClick={deleteSermonData}
+          onClick={deleteSquareData}
           className="text-red-500 text-medium cursor-pointer"
         >
           삭제
