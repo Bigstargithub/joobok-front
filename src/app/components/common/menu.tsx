@@ -41,9 +41,6 @@ export default function CommonMenu() {
               <Link href="/user/pastors">사역자소개</Link>
             </li>
             <li>
-              <Link href="/user/church-vision">교회비전</Link>
-            </li>
-            <li>
               <Link href="/user/church-location">오시는 길</Link>
             </li>
           </ul>
@@ -136,12 +133,6 @@ export default function CommonMenu() {
           >
             <li>
               <Link href="/user/joobok-square">주복광장</Link>
-            </li>
-            <li>
-              <Link href="">우리들의추억</Link>
-            </li>
-            <li>
-              <Link href="">영성글 모임</Link>
             </li>
           </ul>
         </li>

@@ -17,7 +17,7 @@ export default function MessageItemComponent({
 
   return (
     <div
-      className="w-3/4 m-auto flex content-center mt-10 gap-5 cursor-pointer"
+      className="lg:w-3/4 w-8/10 m-auto lg:flex content-center mt-10 gap-5 cursor-pointer border-1 rounded-sm border-stone-300"
       onClick={onClickList}
     >
       <Image
@@ -25,12 +25,16 @@ export default function MessageItemComponent({
         width={300}
         height={0}
         alt={title}
-        className="max-w-[400px] max-h-[300px]"
+        className="lg:max-w-[400px] max-h-[300px] w-full"
       />
-      <div className="flex flex-col justify-between content-between">
+      <div className="flex flex-col justify-between content-between lg:p-0 p-3">
         <div>
-          <h3 className="text-bold text-2xl font-semibold">{title}</h3>
-          <p className="mt-4 text-md font-medium text-grey-300">{desc}</p>
+          <h3 className="text-bold lg:text-2xl text-xl font-semibold">
+            {title}
+          </h3>
+          <p className="lg:mt-4 mt-2 lg:text-md text-sm font-medium text-grey-300">
+            {desc}
+          </p>
         </div>
       </div>
     </div>

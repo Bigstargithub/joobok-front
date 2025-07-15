@@ -27,3 +27,11 @@
 .intro-menu-ul li {
   @apply w-full m-auto text-center p-[5px];
 }
+
+.main-mobile-menu {
+  @apply text-2xl font-bold;
+}
+
+.sub-mobile-menu {
+  @apply text-lg ml-3 font-medium block mt-2;
+}

@@ -20,8 +20,10 @@ export default function MessageVideoPage() {
 
   return (
     <main>
-      <h3 className="text-center text-4xl font-semibold">설교 영상</h3>
-      <div id="message-list mt-10">
+      <h3 className="text-center lg:text-4xl text-3xl font-semibold">
+        설교 영상
+      </h3>
+      <div id="message-list lg:mt-10 mt-5">
         {messageList.map((message) => (
           <MessageItemComponent
             key={`message_${message.id}`}

@@ -10,7 +10,7 @@ export default function CommonHeader({
   setMobileMenu: Dispatch<SetStateAction<boolean>>;
 }) {
   return (
-    <header className="flex flex-row justify-between content-center flex-wrap lg:mt-[30px] p-3 lg:p-0">
+    <header className="flex flex-row justify-between content-center flex-nowrap lg:mt-[30px] p-3 lg:p-0">
       <div className="lg:w-1/3"></div>
       <Link href="/user" className="lg:w-1/3 text-center">
         <Image
@@ -18,14 +18,14 @@ export default function CommonHeader({
           width={600}
           height={0}
           alt="주복교회"
-          className="h-auto inline"
+          className="h-auto inline w-9/10"
         />
       </Link>
       <div
-        className="lg:hidden flex justify-center content-center"
+        className="lg:hidden flex justify-center content-center "
         onClick={() => setMobileMenu(!mobileMenu)}
       >
-        <Image src={"/burger-menu.svg"} width={30} height={30} alt="메뉴" />
+        <Image src={"/burger-menu.svg"} width={45} height={45} alt="메뉴" />
       </div>
       <div className="lg:w-1/3 lg:flex md:flex-wrap content-center flex-row justify-end box-border pr-[40px] hidden">
         <Link

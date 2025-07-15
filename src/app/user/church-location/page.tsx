@@ -4,26 +4,26 @@ import Link from "next/link";
 export default function ChurchLocationPage() {
   return (
     <main>
-      <h2 className="text-center text-3xl text-blue-500 font-semibold">
+      <h2 className="text-center lg:text-3xl text-2xl text-blue-500 font-semibold">
         주복교회 오시는 길
       </h2>
-      <div className="flex mt-10 gap-6">
+      <div className="lg:flex lg:mt-10 mt-5 gap-6">
         <Image
           src="/church_picture.avif"
           width={300}
           height={0}
           alt="주복교회사진"
-          className="w-1/2"
+          className="lg:w-1/2 w-full"
         />
         <Image
           src="/church_map.png"
           width={300}
           height={0}
           alt="주복교회지도"
-          className="w-1/2"
+          className="lg:w-1/2 lg:mt-0 mt-3 w-full"
         />
       </div>
-      <div className="mt-5 text-center">
+      <div className="mt-5 text-center lg:p-0 p-2">
         <p className="text-xl text-blue-600 font-medium">
           충남 천안시 서북구 두정상가6길 18(두정동) 주복교회
         </p>
