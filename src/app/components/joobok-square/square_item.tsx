@@ -1,23 +1,29 @@
 import Image from "next/image";
 
 export default function SquareItemComponent({
-  id,
   thumbnail,
   title,
   description,
-  createdAt,
+  link,
 }: {
-  id: number;
   thumbnail: string;
   title: string;
   description: string;
-  createdAt: string;
+  link: string;
 }) {
+  const onClickDiv = () => {
+    const linkURL = `${process.env.NEXT_PUBLIC_SERVER_URL}${link}`;
+    window.open(linkURL, "_blank");
+  };
+
   return (
-    <div className="w-3/4 m-auto flex content-center mt-10 gap-5 cursor-pointer">
+    <div
+      className="w-3/4 m-auto flex content-center mt-10 gap-5 cursor-pointer"
+      onClick={onClickDiv}
+    >
       <Image
         src={`${process.env.NEXT_PUBLIC_SERVER_URL}${thumbnail}`}
-        width={0}
+        width={300}
         height={0}
         alt="주복광장"
         className="max-w-[400px] max-h-[300px]"

@@ -29,5 +29,5 @@ body {
 }
 
 main {
-  @apply md:w-1/2 m-auto;
+  @apply lg:w-1/2 m-auto;
 }

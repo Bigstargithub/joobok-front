@@ -42,7 +42,8 @@ export default function UserPopupPage() {
           width={document.body.scrollWidth}
           height={0}
           alt="팝업 이미지"
-          className="h-[570px]"
+          className="h-[570px] cursor-pointer"
+          onClick={() => window.open(popupData.link)}
         />
       )}
       <button

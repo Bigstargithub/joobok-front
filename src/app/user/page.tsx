@@ -46,7 +46,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="md:w-screen!">
+    <main className="lg:w-screen!">
       {mainData && (
         <div>
           <Image

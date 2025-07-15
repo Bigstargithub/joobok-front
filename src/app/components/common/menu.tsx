@@ -9,7 +9,7 @@ export default function CommonMenu() {
   const router = useRouter();
 
   return (
-    <nav className="md:w-2/3 flex flex-wrap justify-center content-center mt-[20px] m-auto hidden md:block">
+    <nav className="lg:w-full flex flex-wrap justify-center content-center mt-3 m-auto hidden lg:block">
       <ul className="flex w-full content-center justify-center z-6">
         <li className="menu-li">
           <p
@@ -135,7 +135,7 @@ export default function CommonMenu() {
             onMouseLeave={() => setMenuOpen("")}
           >
             <li>
-              <Link href="">주복광장</Link>
+              <Link href="/user/joobok-square">주복광장</Link>
             </li>
             <li>
               <Link href="">우리들의추억</Link>
