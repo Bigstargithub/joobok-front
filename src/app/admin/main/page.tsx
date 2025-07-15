@@ -23,30 +23,30 @@ export default function AdminMainSettingPage() {
       const jsonData = await data.json();
 
       setMainBanner(
-        jsonData.main_banner === "undefined" ? "" : jsonData.main_banner
+        jsonData.main_banner === undefined ? "" : jsonData.main_banner
       );
       setYoutubeLink(
-        jsonData.youtube_link === "undefined" ? "" : jsonData.youtube_link
+        jsonData.youtube_link === undefined ? "" : jsonData.youtube_link
       );
       setWorshipImage(
-        jsonData.worship_image === "undefined" ? "" : jsonData.worship_image
+        jsonData.worship_image === undefined ? "" : jsonData.worship_image
       );
       setChurchImage(
-        jsonData.church_image === "undefined" ? "" : jsonData.church_image
+        jsonData.church_image === undefined ? "" : jsonData.church_image
       );
 
       setMainBannerPreview(
-        jsonData.main_banner === "undefined"
+        jsonData.main_banner === undefined
           ? ""
           : `${process.env.NEXT_PUBLIC_SERVER_URL}${jsonData.main_banner}`
       );
       setWorshipImagePreview(
-        jsonData.worship_image === "undefined"
+        jsonData.worship_image === undefined
           ? ""
           : `${process.env.NEXT_PUBLIC_SERVER_URL}${jsonData.worship_image}`
       );
       setchurchImagePreview(
-        jsonData.church_image === "undefined"
+        jsonData.church_image === undefined
           ? ""
           : `${process.env.NEXT_PUBLIC_SERVER_URL}${jsonData.church_image}`
       );
