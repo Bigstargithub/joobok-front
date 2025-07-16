@@ -16,49 +16,55 @@ export default function UserMissionaryPage() {
             alt="국내 선교"
             className="lg:w-6/10 w-full"
           />
-          <p className="lg:ml-4 lg:text-xl text-2xl font-bold">
+          <p className="lg:ml-4 lg:text-xl text-2xl font-bold lg:text-left text-center">
             매산여고 교목실
           </p>
         </div>
         <div className="lg:flex lg:mb-0 mb-2">
           <Image
-            src="/domestic_missionary_example.avif"
+            src="/missionary_basic_logo.png"
             width={200}
             height={0}
             alt="국내 선교"
             className="lg:w-6/10 w-full"
           />
-          <p className="lg:ml-4 lg:text-xl text-2xl font-bold">동막교회</p>
+          <p className="lg:ml-4 lg:text-xl text-2xl font-bold lg:text-left text-center">
+            동막교회
+          </p>
         </div>
         <div className="lg:flex lg:mb-0 mb-2">
           <Image
-            src="/domestic_missionary_example.avif"
+            src="/cheonan_asan_logo.gif"
             width={200}
             height={0}
             alt="국내 선교"
             className="lg:w-6/10 w-full"
           />
-          <p className="lg:ml-4 lg:text-xl text-2xl font-bold">천안아산노회</p>
+          <p className="lg:ml-4 lg:text-xl text-2xl font-bold lg:text-left text-center">
+            천안아산노회
+          </p>
         </div>
         <div className="lg:flex lg:mb-0 mb-2">
           <Image
-            src="/domestic_missionary_example.avif"
+            src="/korea_message_logo.png"
             width={200}
             height={0}
             alt="국내 선교"
             className="lg:w-6/10 w-full"
           />
-          <p className="lg:ml-4 lg:text-xl text-2xl font-bold">한국설교학회</p>
+          <p className="lg:ml-4 lg:text-xl text-2xl font-bold lg:text-left text-center">
+            한국설교학회
+          </p>
         </div>
         <div className="lg:flex lg:mb-0 mb-2">
           <Image
-            src="/domestic_missionary_example.avif"
+            src="/hoseo_logo.webp"
             width={200}
             height={0}
             alt="국내 선교"
             className="lg:w-6/10 w-full"
           />
-          <p className="lg:ml-4 lg:text-xl text-2xl font-bold">
+          <p className="lg:ml-4 lg:text-xl text-2xl font-bold lg:text-left text-center">
             호서대(인도장학생)
           </p>
         </div>
@@ -76,7 +82,9 @@ export default function UserMissionaryPage() {
             alt="브라질"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">브라질</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            브라질
+          </p>
         </div>
         <div className="lg:mb-0 mb-2">
           <Image
@@ -86,7 +94,9 @@ export default function UserMissionaryPage() {
             alt="캄보디아"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">캄보디아</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            캄보디아
+          </p>
         </div>
         <div className=" lg:mb-0 mb-2">
           <Image
@@ -96,7 +106,9 @@ export default function UserMissionaryPage() {
             alt="그루지아"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">그루지아</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            그루지아
+          </p>
         </div>
         <div className=" lg:mb-0 mb-2">
           <Image
@@ -106,7 +118,9 @@ export default function UserMissionaryPage() {
             alt="튀르키에(터키)"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">튀르키에(터키)</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            튀르키에(터키)
+          </p>
         </div>
         <div className=" lg:mb-0 mb-2">
           <Image
@@ -116,7 +130,9 @@ export default function UserMissionaryPage() {
             alt="말레이시아"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">말레이시아</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            말레이시아
+          </p>
         </div>
         <div className=" lg:mb-0 mb-2">
           <Image
@@ -126,7 +142,9 @@ export default function UserMissionaryPage() {
             alt="네팔"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">네팔</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            네팔
+          </p>
         </div>
         <div className=" lg:mb-0 mb-2">
           <Image
@@ -136,7 +154,9 @@ export default function UserMissionaryPage() {
             alt="파키스탄"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">파키스탄</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            파키스탄
+          </p>
         </div>
         <div className="lg:mb-0 mb-2">
           <Image
@@ -146,7 +166,9 @@ export default function UserMissionaryPage() {
             alt="뉴질랜드"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">뉴질랜드</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            뉴질랜드
+          </p>
         </div>
         <div className="lg:mb-0 mb-2">
           <Image
@@ -156,7 +178,9 @@ export default function UserMissionaryPage() {
             alt="케냐"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">케냐</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            케냐
+          </p>
         </div>
         <div className="lg:mb-0 mb-2">
           <Image
@@ -166,7 +190,9 @@ export default function UserMissionaryPage() {
             alt="독일"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">독일</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            독일
+          </p>
         </div>
         <div className="lg:mb-0 mb-2">
           <Image
@@ -176,7 +202,9 @@ export default function UserMissionaryPage() {
             alt="마다가스카르"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">마다가스카르</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            마다가스카르
+          </p>
         </div>
         <div className="lg:mb-0 mb-2">
           <Image
@@ -186,7 +214,9 @@ export default function UserMissionaryPage() {
             alt="볼리비아"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">볼리비아</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            볼리비아
+          </p>
         </div>
         <div className="lg:mb-0 mb-2">
           <Image
@@ -196,7 +226,9 @@ export default function UserMissionaryPage() {
             alt="필리핀"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">필리핀</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            필리핀
+          </p>
         </div>
         <div className="lg:mb-0 mb-2">
           <Image
@@ -206,7 +238,9 @@ export default function UserMissionaryPage() {
             alt="잔지바르"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">잔지바르</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            잔지바르
+          </p>
         </div>
         <div className="lg:mb-0 mb-2">
           <Image
@@ -216,7 +250,9 @@ export default function UserMissionaryPage() {
             alt="태국"
             className="lg:w-6/10 w-full h-[230px] object-contain"
           />
-          <p className="lg:text-xl text-2xl font-bold mt-2">태국</p>
+          <p className="lg:text-xl text-2xl font-bold mt-2 lg:text-left text-center">
+            태국
+          </p>
         </div>
       </div>
     </section>

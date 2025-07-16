@@ -22,7 +22,7 @@ export default function CommonMobileMenu({
         className="absolute w-screen h-screen bg-gray-700 z-10 top-0 left-0 opacity-70 overflow-hidden"
         onClick={() => setMobileMenu(false)}
       ></div>
-      <div className="w-7/10 bg-white absolute right-0 h-full opacity-100 z-11 py-2">
+      <div className="w-7/10 bg-white absolute right-0 h-full opacity-100 z-11 py-2 overflow-scroll">
         <Image
           src={"/logo_pc.jpeg"}
           width={600}
