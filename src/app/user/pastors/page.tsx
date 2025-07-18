@@ -41,7 +41,7 @@ export default function PastorsPage() {
               width={300}
               height={0}
               alt="부목사 배종화"
-              className="h-auto"
+              className="h-auto w-full"
             />
             <h3 className="text-center text-xl font-medium mt-3">
               부목사 양성규
