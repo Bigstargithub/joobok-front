@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { Dispatch, SetStateAction } from "react";
 
 export default function CommonMobileMenu({
-  mobileMenu,
   setMobileMenu,
 }: {
   mobileMenu: boolean;

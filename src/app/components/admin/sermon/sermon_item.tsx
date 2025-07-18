@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function SermonItemComponent({
   id,
@@ -16,7 +15,6 @@ export default function SermonItemComponent({
   createdAt: string;
 }) {
   const convertCreatedAt = new Date(createdAt).toISOString().split("T")[0];
-  const router = useRouter();
 
   const deleteSermonData = async () => {
     if (confirm("정말 설교 영상을 삭제하시겠습니까?")) {

@@ -5,8 +5,7 @@ export default function UserInfantPage() {
     <section>
       <div className="lg:p-0 p-5 lg:py-10 flex justify-center content-center flex-col flex-wrap">
         <h3 className="font-bold lg:text-2xl text-xl text-blue-700 text-center">
-          "예수는 지혜와 키가 자라가며 하나님과 사람에게 더욱 사랑스러워
-          가시더라"
+          예수는 지혜와 키가 자라가며 하나님과 사람에게 더욱 사랑스러워 가시더라
         </h3>
         <p className="fold-medium text-center lg:mt-3 mt-2 text-blue-700">
           (누가복음 2장 52절)
@@ -32,8 +31,8 @@ export default function UserInfantPage() {
               ​​표어 : 예수님 안에서 쑥쑥 자라요!
             </p>
             <p className="mt-2 text-white lg:text-xl text-md tracking-wider">
-              주제말씀 : "예수는 지혜와 키가 자라가며 하나님과 사람에게 더욱
-              사랑스러워 가시더라" (누가복음 2장 52절)
+              주제말씀 : 예수는 지혜와 키가 자라가며 하나님과 사람에게 더욱
+              사랑스러워 가시더라 (누가복음 2장 52절)
             </p>
             <br />
             <p className="mt-2 text-white lg:text-xl text-md tracking-wider">

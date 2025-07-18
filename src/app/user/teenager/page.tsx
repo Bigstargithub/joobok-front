@@ -5,8 +5,8 @@ export default function UserYouthPage() {
     <section>
       <div className="flex justify-center content-center flex-col flex-wrap p-5 lg:p-0 lg:py-10">
         <h3 className="font-bold lg:text-2xl text-xl text-blue-700 text-center">
-          "구하는 이마다 받을 것이요 찾는 이마다 찾아낼 것이요 두드리는 이에게는
-          열릴 것이니라"
+          구하는 이마다 받을 것이요 찾는 이마다 찾아낼 것이요 두드리는 이에게는
+          열릴 것이니라
         </h3>
         <p className="fold-medium text-center lg:mt-3 mt-2 text-blue-700">
           (마태복음 7장 8절)
@@ -32,8 +32,8 @@ export default function UserYouthPage() {
               표어 : 하나님의 꿈을 실천하라
             </p>
             <p className="mt-2 text-white lg:text-xl text-md tracking-wider">
-              주제말씀 : "구하는 이마다 받을 것이요 찾는 이마다 찾아낼 것이요
-              두드리는 이에게는 열릴 것이니라" (마태복음 7:8)
+              주제말씀 : 구하는 이마다 받을 것이요 찾는 이마다 찾아낼 것이요
+              두드리는 이에게는 열릴 것이니라 (마태복음 7:8)
             </p>
             <br />
             <p className="mt-2 text-white lg:text-xl text-md tracking-wider">

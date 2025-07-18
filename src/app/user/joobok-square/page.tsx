@@ -3,8 +3,16 @@
 import SquareItemComponent from "@/app/components/joobok-square/square_item";
 import { useEffect, useState } from "react";
 
+type SquareDataType = {
+  id: number;
+  thumbnail: string;
+  title: string;
+  description: string;
+  link: string;
+};
+
 export default function UserJoobokSquarePage() {
-  const [squareList, setSquareList] = useState([]);
+  const [squareList, setSquareList] = useState<SquareDataType[]>([]);
 
   useEffect(() => {
     const getSquareList = async () => {

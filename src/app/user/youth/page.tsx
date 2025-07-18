@@ -5,7 +5,7 @@ export default function UserYouthPage() {
     <section>
       <div className="p-5 lg:p-0 lg:py-10 flex justify-center content-center flex-col flex-wrap">
         <h3 className="font-bold lg:text-2xl text-xl text-blue-700 text-center">
-          "주의 영이 계신 곳에는 자유가 있느니라"
+          주의 영이 계신 곳에는 자유가 있느니라
         </h3>
         <p className="fold-medium text-center mt-3 text-blue-700">
           (고린도후서 3장 17절)
@@ -31,7 +31,7 @@ export default function UserYouthPage() {
               표어 : 예배함으로 하나님을 누리는 청년
             </p>
             <p className="mt-2 text-white lg:text-xl text-md tracking-wider">
-              주제말씀 : "주의 영이 계신 곳에는 자유가 있느니라" (고후 3:17)
+              주제말씀 : 주의 영이 계신 곳에는 자유가 있느니라 (고후 3:17)
             </p>
             <br />
             <p className="mt-2 text-white lg:text-xl text-md tracking-wider">

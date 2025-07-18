@@ -5,9 +5,16 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
+type SquareDataType = {
+  thumbnail?: string;
+  title?: string;
+  description?: string;
+  link?: string;
+};
+
 export default function AdminSquareCreatePage() {
   const [squareThumbnailPreview, setSquareThumbnailPreview] = useState("");
-  const [squareData, setSquareData] = useState({});
+  const [squareData, setSquareData] = useState<SquareDataType>({});
   const router = useRouter();
   const searchParam = useSearchParams();
   const id = searchParam.get("id");

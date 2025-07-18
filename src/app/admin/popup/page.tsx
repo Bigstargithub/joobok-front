@@ -11,9 +11,16 @@ import {
   useState,
 } from "react";
 
+type PopupDataType = {
+  image_url?: string;
+  link?: string;
+  start_date?: string;
+  end_date?: string;
+};
+
 export default function AdminPopupPage() {
   const [popupImagePreview, setPopupImagePreview] = useState("");
-  const [popupData, setPopupData] = useState({});
+  const [popupData, setPopupData] = useState<PopupDataType>({});
   const router = useRouter();
 
   useEffect(() => {

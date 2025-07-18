@@ -3,8 +3,16 @@
 import { useEffect, useState } from "react";
 import MessageItemComponent from "../../components/messages/message_item";
 
+type MessageType = {
+  id: number;
+  thumbnail: string;
+  title: string;
+  description: string;
+  video_link: string;
+};
+
 export default function MessageVideoPage() {
-  const [messageList, setMessageList] = useState([]);
+  const [messageList, setMessageList] = useState<MessageType[]>([]);
 
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/sermon`, {

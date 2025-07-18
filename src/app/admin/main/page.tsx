@@ -2,13 +2,16 @@
 
 import AdminHeaderComponent from "@/app/components/admin/admin_header";
 import Image from "next/image";
-import { ChangeEvent, useEffect, useRef, useState } from "react";
+import {
+  ChangeEvent,
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 
 export default function AdminMainSettingPage() {
-  const [mainBanner, setMainBanner] = useState("");
   const [youtubeLink, setYoutubeLink] = useState("");
-  const [worshipImage, setWorshipImage] = useState("");
-  const [churchImage, setChurchImage] = useState("");
   const [mainBannerPreview, setMainBannerPreview] = useState("");
   const [worshipImagePreview, setWorshipImagePreview] = useState("");
   const [churchImagePreview, setchurchImagePreview] = useState("");
@@ -22,19 +25,9 @@ export default function AdminMainSettingPage() {
     }).then(async (data) => {
       const jsonData = await data.json();
 
-      setMainBanner(
-        jsonData.main_banner === undefined ? "" : jsonData.main_banner
-      );
       setYoutubeLink(
         jsonData.youtube_link === undefined ? "" : jsonData.youtube_link
       );
-      setWorshipImage(
-        jsonData.worship_image === undefined ? "" : jsonData.worship_image
-      );
-      setChurchImage(
-        jsonData.church_image === undefined ? "" : jsonData.church_image
-      );
-
       setMainBannerPreview(
         jsonData.main_banner === undefined
           ? ""
@@ -55,14 +48,12 @@ export default function AdminMainSettingPage() {
 
   const onfileChange = (
     event: ChangeEvent<HTMLInputElement>,
-    setState,
-    setPreviewState
+    setPreviewState: Dispatch<SetStateAction<string>>
   ) => {
     const inputFile = event.target.files?.[0];
 
     if (inputFile && inputFile?.type.startsWith("image/")) {
       const imageURL = URL.createObjectURL(inputFile);
-      setState(imageURL);
       setPreviewState(imageURL);
     }
   };
@@ -96,9 +87,7 @@ export default function AdminMainSettingPage() {
               type="file"
               name="main_banner_image"
               id="main_banner_image"
-              onChange={(e) =>
-                onfileChange(e, setMainBanner, setMainBannerPreview)
-              }
+              onChange={(e) => onfileChange(e, setMainBannerPreview)}
             />
             {mainBannerPreview > "" && (
               <Image
@@ -127,9 +116,7 @@ export default function AdminMainSettingPage() {
               type="file"
               name="worship_image"
               id="worship_image"
-              onChange={(e) =>
-                onfileChange(e, setWorshipImage, setWorshipImagePreview)
-              }
+              onChange={(e) => onfileChange(e, setWorshipImagePreview)}
             />
             {worshipImagePreview > "" && (
               <Image
@@ -147,9 +134,7 @@ export default function AdminMainSettingPage() {
               type="file"
               name="church_image"
               id="church_image"
-              onChange={(e) =>
-                onfileChange(e, setChurchImage, setchurchImagePreview)
-              }
+              onChange={(e) => onfileChange(e, setchurchImagePreview)}
             />
             {churchImagePreview > "" && (
               <Image

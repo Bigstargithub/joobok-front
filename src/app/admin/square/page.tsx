@@ -5,8 +5,16 @@ import AdminSquareItemComponent from "@/app/components/admin/sqaure/square_admin
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+type SquareDataType = {
+  id: number;
+  thumbnail: string;
+  title: string;
+  description: string;
+  created_at: string;
+};
+
 export default function SquareListAdminPage() {
-  const [squareList, setSqaureList] = useState([]);
+  const [squareList, setSqaureList] = useState<SquareDataType[]>([]);
 
   const getSquareList = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/square`, {

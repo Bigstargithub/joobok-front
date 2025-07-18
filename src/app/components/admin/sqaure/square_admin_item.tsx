@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function AdminSquareItemComponent({
   id,
@@ -16,7 +15,6 @@ export default function AdminSquareItemComponent({
   createdAt: string;
 }) {
   const convertCreatedAt = new Date(createdAt).toISOString().split("T")[0];
-  const router = useRouter();
 
   const deleteSquareData = async () => {
     if (confirm("정말 주복광장 데이터를 삭제하시겠습니까?")) {

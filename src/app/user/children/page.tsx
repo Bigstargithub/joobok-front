@@ -5,8 +5,8 @@ export default function UserChildrenPage() {
     <section>
       <div className="lg:p-0 p-5 lg:py-10 flex justify-center content-center flex-col flex-wrap">
         <h3 className="font-bold lg:text-2xl text-xl text-blue-700 text-center">
-          "예수께서 이르시되 나를 따라오라 내가 너희로 사람을 낚는 어부가 되게
-          하리라 하시니"
+          예수께서 이르시되 나를 따라오라 내가 너희로 사람을 낚는 어부가 되게
+          하리라 하시니
         </h3>
         <p className="fold-medium text-center lg:mt-3 mt-2 text-blue-700">
           (마가복음 1장 7절)
@@ -32,8 +32,8 @@ export default function UserChildrenPage() {
               ​​표어 : 우리는 예수님의 작은 제자!
             </p>
             <p className="mt-2 text-white lg:text-xl text-md tracking-wider">
-              주제말씀 : "예수께서 이르시되 나를 따라오라 내가 너희로 사람을
-              낚는 어부가 되게 하리라 하시니" (마가복음 1:7)
+              주제말씀 : 예수께서 이르시되 나를 따라오라 내가 너희로 사람을 낚는
+              어부가 되게 하리라 하시니 (마가복음 1:7)
             </p>
             <br />
             <p className="mt-2 text-white lg:text-xl text-md tracking-wider">
@@ -42,7 +42,7 @@ export default function UserChildrenPage() {
               1) 하나님께서는 우리를 사랑하시며 예수님을 통하여 구원해주심을
               깨닫는다.
               <br />
-              2) 우리를 제자로 부르시는 예수님의 말씀에 "예! 따르겠어요!" 라고
+              2) 우리를 제자로 부르시는 예수님의 말씀에 예! 따르겠어요! 라고
               고백하는 어린이가 된다.
               <br />
               3) 세상 속에서 복음을 전하는 어린이, 선한 영향력을 흘려보내는

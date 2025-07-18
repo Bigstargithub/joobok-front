@@ -5,8 +5,16 @@ import SermonItemComponent from "@/app/components/admin/sermon/sermon_item";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+type SermonType = {
+  id: number;
+  thumbnail: string;
+  title: string;
+  description: string;
+  created_at: string;
+};
+
 export default function SermonAdminPage() {
-  const [sermonList, setSermonList] = useState([]);
+  const [sermonList, setSermonList] = useState<SermonType[]>([]);
 
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/sermon`, {

@@ -7,8 +7,15 @@ import MainChurchArea from "../components/main/church";
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 
+type MainDataType = {
+  main_banner: string;
+  youtube_link: string;
+  worship_image: string;
+  church_image: string;
+};
+
 export default function Home() {
-  const [mainData, setMainData] = useState(null);
+  const [mainData, setMainData] = useState<MainDataType>();
 
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/main`, {

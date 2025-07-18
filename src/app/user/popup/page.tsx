@@ -4,8 +4,13 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 
+type PopupDataType = {
+  image_url: string;
+  link: string;
+};
+
 export default function UserPopupPage() {
-  const [popupData, setPopupData] = useState({});
+  const [popupData, setPopupData] = useState<PopupDataType>();
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/main/popup?is_open=Y`, {
       method: "GET",
