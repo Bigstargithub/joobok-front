@@ -20,6 +20,9 @@ export default function AdminHeaderComponent() {
         <li>
           <Link href="/admin/square">주복광장</Link>
         </li>
+        <li>
+          <Link href="/admin/photos">우리들의 추억</Link>
+        </li>
       </ul>
     </header>
   );

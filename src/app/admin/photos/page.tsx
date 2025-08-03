@@ -1,11 +1,11 @@
 "use client";
 
 import AdminHeaderComponent from "@/app/components/admin/admin_header";
-import SermonItemComponent from "@/app/components/admin/sermon/sermon_item";
+import PhotoItemComponent from "@/app/components/admin/photo/photo_item";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-type SermonType = {
+type PhotoType = {
   id: number;
   thumbnail: string;
   title: string;
@@ -13,11 +13,11 @@ type SermonType = {
   created_at: string;
 };
 
-export default function SermonAdminPage() {
-  const [sermonList, setSermonList] = useState<SermonType[]>([]);
+export default function AdminPhotosListPage() {
+  const [photoList, setPhotoList] = useState<PhotoType[]>([]);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/sermon`, {
+    fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/photo`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export default function SermonAdminPage() {
     }).then(async (data) => {
       const jsonData = await data.json();
       if (jsonData.status === 200) {
-        setSermonList(jsonData.sermonList);
+        setPhotoList(jsonData.photoList);
       } else {
         alert(jsonData.message);
       }
@@ -36,10 +36,10 @@ export default function SermonAdminPage() {
     <section>
       <AdminHeaderComponent />
       <div className="p-4">
-        <h1 className="text-2xl font-bold">설교영상 리스트</h1>
+        <h1 className="text-2xl font-bold">우리들의 추억 리스트</h1>
         <div className="flex justify-end">
           <Link
-            href="/admin/sermon/create"
+            href="/admin/photos/create"
             className="border-1 cursor-pointer bg-black text-white px-10 py-4"
           >
             등록
@@ -57,15 +57,15 @@ export default function SermonAdminPage() {
             </tr>
           </thead>
           <tbody>
-            {sermonList.length > 0 &&
-              sermonList.map((sermon) => (
-                <SermonItemComponent
-                  key={`sermon_${sermon.id}`}
-                  id={sermon.id}
-                  thumbLink={sermon.thumbnail}
-                  title={sermon.title}
-                  description={sermon.description}
-                  createdAt={sermon.created_at}
+            {photoList.length > 0 &&
+              photoList.map((photo) => (
+                <PhotoItemComponent
+                  key={`photo_${photo.id}`}
+                  id={photo.id}
+                  thumbnail={photo.thumbnail}
+                  title={photo.title}
+                  description={photo.description}
+                  createdAt={photo.created_at}
                 />
               ))}
           </tbody>
