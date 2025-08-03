@@ -10,7 +10,7 @@ export default function AdminPhotosCreatePage() {
   const [photoTitle, setPhotoTitle] = useState("");
   const [photoDes, setPhotoDes] = useState("");
   const [thumbnail, setThumbnail] = useState("");
-  const fileRef = useRef(null);
+  const fileRef = useRef<HTMLInputElement>(null);
 
   const searchParam = useSearchParams();
   const id = searchParam.get("id");
@@ -38,7 +38,11 @@ export default function AdminPhotosCreatePage() {
 
   const formSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (fileRef.current && fileRef.current?.files.length > 100)
+    if (
+      fileRef.current &&
+      fileRef.current.files &&
+      fileRef.current?.files.length > 100
+    )
       return alert("파일 이미지는 100개 이하만 가능합니다.");
 
     if (thumbnail === "") return alert("썸네일을 등록하시기 바랍니다.");

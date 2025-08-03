@@ -44,7 +44,7 @@ export default function AdminSquareCreatePage() {
 
       getSquareDetail();
     }
-  }, []);
+  }, [id]);
 
   const formSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

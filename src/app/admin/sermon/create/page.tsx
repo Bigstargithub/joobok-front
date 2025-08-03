@@ -45,7 +45,7 @@ export default function SermonCreatePage() {
         );
       });
     }
-  }, []);
+  }, [id]);
 
   const onFileChange = (
     event: ChangeEvent<HTMLInputElement>,

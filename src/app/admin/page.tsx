@@ -14,8 +14,6 @@ export default function AdminHomePage() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${accessToken}`,
         },
-      }).then(async (data) => {
-        const jsonData = await data.json();
       });
     }
   }, []);
