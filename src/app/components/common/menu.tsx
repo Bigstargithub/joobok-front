@@ -134,6 +134,9 @@ export default function CommonMenu() {
             <li>
               <Link href="/user/joobok-square">주복광장</Link>
             </li>
+            <li>
+              <Link href="/user/memories">우리들의 추억</Link>
+            </li>
           </ul>
         </li>
         <li className="menu-li">

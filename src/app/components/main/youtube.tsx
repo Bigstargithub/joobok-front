@@ -27,12 +27,14 @@ export default function MainYoutubeArea({
           </div>
         </div>
         <div className="lg:w-1/2 bg-red">
-          <iframe
-            src={`https://www.youtube.com/embed/${youtubeVideoId}`}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            className="w-full lg:min-h-[600px] min-h-100"
-          ></iframe>
+          <div className="pb-[56.25%] relative">
+            <iframe
+              src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share allowfullscreen"
+              className="w-full absolute t-0 l-0 h-full"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
